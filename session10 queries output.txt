@@ -1,13 +1,8 @@
 ARTI 401 - Session 10: Prolog Operators Part II
-Queries and expected output (traced by hand, not run in SWI-Prolog)
-
+Queries and output
 Load the code first:
-?- [session10_prolog_operators].
-true.
 
-=====================================================
 TASK 1: Area and perimeter
-=====================================================
 
 ?- area(square(5), A).
 A = 25.
@@ -33,18 +28,15 @@ rectangle(6,4)
   Perimeter = 20
 true.
 
-=====================================================
-TASK 2: Login (type text and press Enter, no dot needed)
-=====================================================
-
---- Correct on the first try ---
+TASK 2: Login 
+# all correct 
 ?- login.
 Username: ahmed
 Password: pass123
 Login Successful
 true.
 
---- One wrong attempt, then correct ---
+# One wrong attempt, then correct 
 ?- login.
 Username: ahmed
 Password: wrong
@@ -54,7 +46,7 @@ Password: pass123
 Login Successful
 true.
 
---- Three wrong attempts ---
+# Three wrong attempts 
 ?- login.
 Username: sara
 Password: 111
