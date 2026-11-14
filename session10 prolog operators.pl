@@ -28,5 +28,3 @@ ask(Msg, Atom) :- write(Msg), flush_output, read_line_to_string(user_input, S), 
 
 login_attempt(N) :- max_attempts(Max), N =< Max, !, ask('Username: ', U), ask('Password: ', P), ( user(U, P) -> writeln('Login Successful') ; writeln('Login Unsuccessful'), N1 is N + 1, login_attempt(N1) ).
 login_attempt(_) :- writeln('Sorry, you exceeded the maximum number of attempts, try again later.').
-
-% Run with:  ?- login.     (just type the text and press Enter, no dot needed, e.g.  ahmed)
