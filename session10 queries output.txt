@@ -1,0 +1,69 @@
+ARTI 401 - Session 10: Prolog Operators Part II
+Queries and expected output (traced by hand, not run in SWI-Prolog)
+
+Load the code first:
+?- [session10_prolog_operators].
+true.
+
+=====================================================
+TASK 1: Area and perimeter
+=====================================================
+
+?- area(square(5), A).
+A = 25.
+
+?- perimeter(square(5), P).
+P = 20.
+
+?- area(rectangle(6, 4), A).
+A = 24.
+
+?- perimeter(rectangle(6, 4), P).
+P = 20.
+
+?- area(triangle(6, 4, 5, 5, 6), A).
+A = 12.0.
+
+?- perimeter(triangle(6, 4, 5, 5, 6), P).
+P = 16.
+
+?- shape_info(rectangle(6, 4)).
+rectangle(6,4)
+  Area      = 24
+  Perimeter = 20
+true.
+
+=====================================================
+TASK 2: Login (type text and press Enter, no dot needed)
+=====================================================
+
+--- Correct on the first try ---
+?- login.
+Username: ahmed
+Password: pass123
+Login Successful
+true.
+
+--- One wrong attempt, then correct ---
+?- login.
+Username: ahmed
+Password: wrong
+Login Unsuccessful
+Username: ahmed
+Password: pass123
+Login Successful
+true.
+
+--- Three wrong attempts ---
+?- login.
+Username: sara
+Password: 111
+Login Unsuccessful
+Username: sara
+Password: 222
+Login Unsuccessful
+Username: Ahmed
+Password: pass123
+Login Unsuccessful
+Sorry, you exceeded the maximum number of attempts, try again later.
+true.
