@@ -1,4 +1,4 @@
-%% ---------- TASK 1: Area and perimeter ----------
+%%  TASK 1: Area and perimeter 
 
 :- discontiguous area/2, perimeter/2.
 
@@ -13,7 +13,7 @@ perimeter(triangle(_, _, S1, S2, S3), P) :- P is S1 + S2 + S3.
 
 shape_info(Shape) :- area(Shape, A), perimeter(Shape, P), format("~w~n  Area      = ~w~n  Perimeter = ~w~n", [Shape, A, P]).
 
-%% ---------- TASK 2: Login (3 attempts in total) ----------
+%% TASK 2: Login (3 attempts in total) 
 
 user(ahmed, pass123).
 user(sara, abc456).
