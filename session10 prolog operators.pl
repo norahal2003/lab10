@@ -1,6 +1,3 @@
-%% ARTI 401 - Session 10: Prolog Operators Part II
-%% Run in SWI-Prolog:  ?- [session10_prolog_operators].
-
 %% ---------- TASK 1: Area and perimeter ----------
 
 :- discontiguous area/2, perimeter/2.
@@ -15,12 +12,6 @@ area(triangle(B, H, _, _, _), A) :- A is 0.5 * B * H.
 perimeter(triangle(_, _, S1, S2, S3), P) :- P is S1 + S2 + S3.
 
 shape_info(Shape) :- area(Shape, A), perimeter(Shape, P), format("~w~n  Area      = ~w~n  Perimeter = ~w~n", [Shape, A, P]).
-
-% Examples:
-%   ?- area(square(5), A).                     A = 25.
-%   ?- perimeter(rectangle(6, 4), P).          P = 20.
-%   ?- area(triangle(6, 4, 5, 5, 6), A).       A = 12.0.
-%   ?- shape_info(rectangle(6, 4)).
 
 %% ---------- TASK 2: Login (3 attempts in total) ----------
 
